@@ -8,7 +8,51 @@
 </head>
 
 <body>
-    <h1> Premier Football </h1>
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">{{leagueTable.leagueCaption}}</h1>
+      </div>
+    </section>
+    <div class="container">
+      <table class="table">
+        <thead class="thead-inverse">
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>GP</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>GD</th>
+            <th>PTS</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {{#each leagueTable.standing as |team|}}
+                <tr>
+                    <th scope="row">{{team.position}}</th>
+                    <td><div class="image" style="width:30px; display:inline;"> <img src={{team.crestURI}} style="width:30px; height:30px;"></div> {{team.teamName}}</td>
+                    <td>{{team.playedGames}}</td>
+                    <td>{{team.wins}}</td>
+                    <td>{{team.draws}}</td>
+                    <td>{{team.losses}}</td>
+                    <td>{{team.goals}}</td>
+                    <td>{{team.goalsAgainst}}</td>
+                    <td>{{team.goalDifference}}</td>
+                    <td>{{team.points}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Created by Facund Fortuny</span>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>

@@ -14,7 +14,13 @@ app.set('views', './views');
 app.set('view engine', 'hbs');
 
 app.get('/', function(req, res) {
-    res.render('index');
+    request(options)
+    .then(function (response) {
+        leagueTable = JSON.parse(response);
+        res.render('index', {leagueTable: leagueTable});
+    })
+    .catch(function (err) {
+    });
 });
 
 
