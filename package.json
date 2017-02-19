@@ -1,0 +1,32 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "Develop a basic web page using Node.js, Express and Handlebars",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facundfortuny/expressapp.git"
+  },
+  "author": "Facund Fortuny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facundfortuny/expressapp/issues"
+  },
+  "homepage": "https://github.com/facundfortuny/expressapp#readme",
+  "dependencies": {
+    "body-parser": "~1.16.1",
+    "consolidate": "~0.14.5",
+    "dotenv": "~4.0.0",
+    "express": "~4.14.1",
+    "handlebars": "~4.0.6",
+    "request": "~2.79.0",
+    "request-promise": "~4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "~1.11.0"
+  }
+}
