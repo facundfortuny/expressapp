@@ -20,6 +20,7 @@ app.get('/', function(req, res) {
         res.render('index', {leagueTable: leagueTable});
     })
     .catch(function (err) {
+        res.render('error');
     });
 });
 
