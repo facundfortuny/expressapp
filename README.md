@@ -26,16 +26,17 @@ npm start
 
 On the `.env` file you will find the environment variables need it to run the application:
 
-`PORT`: The port the app is Running
-`API_URL`: Api url where to fetch the data
-`API_TOKEN`: Api token necessary for validation
+- `PORT`: The port the app is Running
+- `API_URL`: Api url where to fetch the data
+- `API_TOKEN`: Api token necessary for validation
 
-To get this tokens you will need to register `http://api.football-data.org/register`
+To get this tokens you will need to register [API Football Data] (http://api.football-data.org/register)
 
 ### Technology stack
 
 - [x] NodeJS
 - [x] ExpressJS
 - [x] Handlebars
+- [X] Bootstrap 4
 
 
