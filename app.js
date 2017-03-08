@@ -4,7 +4,14 @@ var express = require('express'),
     engines = require('consolidate'),
     request = require('request-promise'),
     dotenv = require('dotenv').config(),
-    server;
+    server,
+    options = {
+      url: process.env.API_URL,
+      headers: {
+          'X-Auth-Token': process.env.API_TOKEN
+      },
+      dataType: 'json',
+    };
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
